@@ -116,12 +116,17 @@ legend{font-weight:600;font-size:1.08rem;padding:0;margin-bottom:14px}
 .listed{margin-top:28px;padding-top:22px;border-top:1px solid var(--line);font-size:.95rem;color:var(--muted)}
 .listed b{color:var(--ink);font-weight:600}
 
-/* guests */
-.guests{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
-.guest{display:grid;grid-template-columns:72px 1fr;gap:18px;align-items:start}
-.guest img{width:72px;height:72px;border-radius:50%;object-fit:cover}
-.guest h3{font-size:1.2rem;margin-bottom:6px}
-.guest p{font-size:1rem;color:var(--muted);margin:0}
+/* reviews */
+.reviews-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px 48px}
+.rating{display:flex;align-items:center;gap:14px;font-size:.97rem;color:var(--muted)}
+.rating b{font-family:var(--display);font-weight:400;font-size:2.6rem;line-height:1;color:var(--ink)}
+.stars{color:#B8860B;letter-spacing:2px;font-size:1.1rem;display:block}
+.reviews{columns:3 300px;column-gap:24px;margin-top:44px}
+.review{break-inside:avoid;margin:0 0 24px;background:#fff;border-radius:14px;padding:26px 26px 22px}
+.review blockquote{margin:0 0 18px;font-size:1.02rem;line-height:1.6}
+.review figcaption{display:flex;align-items:center;gap:12px;font-size:.93rem;color:var(--muted)}
+.review figcaption img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+.review figcaption b{display:block;color:var(--ink);font-weight:600}
 
 /* explain */
 .explain{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;margin:48px 0 40px}
@@ -198,7 +203,7 @@ footer p{max-width:86ch;margin-bottom:.8em}
   .facts li:first-child{padding-left:14px}
   .facts li:nth-child(-n+2){border-top:0}
   .split,.place-head,.retreat,.faq-grid,.close .wrap{grid-template-columns:1fr;gap:36px}
-  .guests,.explain,.team{grid-template-columns:1fr;gap:28px}
+  .explain,.team{grid-template-columns:1fr;gap:28px}
   .team{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr 1fr;row-gap:30px}
   .g1,.g2{grid-column:span 12;aspect-ratio:16/10}
@@ -252,7 +257,7 @@ footer p{max-width:86ch;margin-bottom:.8em}
         <a class="btn btn-primary" href="#apply">Check your fit</a>
         <a class="btn btn-ghost" href="#retreat">See the 8-day retreat</a>
       </div>
-      <p class="hero-note">Next retreat: December 6 to 13, 2026. Seven more dates in 2027.</p>
+      <p class="hero-note">Rated 5.0 from 8 Google reviews. Next retreat: December 6 to 13, 2026, with seven more dates in 2027.</p>
     </div>
 
     <div class="form-card" id="apply">
@@ -336,20 +341,35 @@ footer p{max-width:86ch;margin-bottom:.8em}
 
 <section class="band band-tint">
   <div class="wrap">
-    <h2>What past guests say about their week</h2>
-    <div class="guests">
-      <div class="guest">
-        <img src="img/guest-brante.webp" alt="Brante" loading="lazy">
-        <div><h3>Brante</h3><p>Came for a first ceremony, calls the experience extraordinary, and says the founders felt like family.</p></div>
-      </div>
-      <div class="guest">
-        <img src="img/guest-lester.webp" alt="Lester" loading="lazy">
-        <div><h3>Lester</h3><p>Remembers a spectacular first night, with facilitators who stayed close and supported him throughout.</p></div>
-      </div>
-      <div class="guest">
-        <img src="img/guest-chad.webp" alt="Chad" loading="lazy">
-        <div><h3>Chad</h3><p>Joined in July 2025 and describes safe, personal care, with integration support that continued after he left.</p></div>
-      </div>
+    <div class="reviews-head">
+      <h2>What past guests say about their week</h2>
+      <div class="rating"><b>5.0</b><span><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>From 8 reviews on Google</span></div>
+    </div>
+    <div class="reviews">
+      <figure class="review">
+        <blockquote>&ldquo;From the moment you book, you can feel the difference. You&rsquo;re not treated like a slot on a schedule or another face in a crowd.&hellip; Post-ceremony, there&rsquo;s no sales pitch, no pressure to return, and no feeling that you&rsquo;re a transaction.&rdquo;</blockquote>
+        <figcaption><span><b>Charles G.</b>Google review</span></figcaption>
+      </figure>
+      <figure class="review">
+        <blockquote>&ldquo;This was my first such experience and I was admittedly nervous. Yasha and Ania, the founders of Maha Devi, went above and beyond to acknowledge my trepidation and alleviate it.&hellip; there aren&rsquo;t any fees that arise - it&rsquo;s all covered in the decidedly fair price advertised.&rdquo;</blockquote>
+        <figcaption><img src="img/guest-chad.webp" alt="" loading="lazy"><span><b>Chad D.</b>July 2025 retreat, Google review</span></figcaption>
+      </figure>
+      <figure class="review">
+        <blockquote>&ldquo;Travelling to a new country my family had many safety concerns, but I&rsquo;m so glad I chose Maha Devi. They looked out for us, answered all our questions&hellip; There was no pressure, no hard selling&hellip;&rdquo;</blockquote>
+        <figcaption><span><b>Emily B.</b>Google review</span></figcaption>
+      </figure>
+      <figure class="review">
+        <blockquote>&ldquo;This was my first retreat of this kind, and it was a profound journey.&hellip; From the facilitators to Tatai&rsquo;s entire team, I felt truly seen and cared for.&rdquo;</blockquote>
+        <figcaption><span><b>Gus J.</b>Google review</span></figcaption>
+      </figure>
+      <figure class="review">
+        <blockquote>&ldquo;The healers, supporters, integrators and community are sincere in their practice of caring. You&rsquo;ll remember this experience for the rest of your life.&rdquo;</blockquote>
+        <figcaption><span><b>Shepard G.</b>Google review</span></figcaption>
+      </figure>
+      <figure class="review">
+        <blockquote>&ldquo;Highly, highly recommend Mahadevi and the team to anyone regardless of their background, age, or experience level.&rdquo;</blockquote>
+        <figcaption><span><b>Sam M.</b>Google review</span></figcaption>
+      </figure>
     </div>
   </div>
 </section>
