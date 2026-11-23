@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MahaDevi Retreats | 8-day ceremonial retreat in Putumayo, Colombia</title>
+<meta name="description" content="A 7-night traditional ceremonial retreat in the Colombian jungle. Small groups of 7 to 12, screening before acceptance, and 90 days of integration support.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#12261E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#12261E;      /* canopy at dusk */
+  --river:#2C6455;       /* Putumayo water */
+  --moss:#DDE5DA;        /* panel tint */
+  --fog:#F2F5F0;         /* page */
+  --ink:#1B2A24;
+  --muted:#55655E;
+  --macaw:#C5281C;       /* scarlet macaw: actions only */
+  --macaw-dark:#A31F15;
+  --line:#C9D3C8;
+  --display:"Gloock", "Iowan Old Style", Georgia, serif;
+  --body:"Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --wrap:1160px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--fog);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,4.2vw,3.1rem);max-width:18ch}
+h3{font-size:1.45rem;line-height:1.2}
+p{margin:0 0 1em;max-width:62ch}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.band{padding:96px 0}
+.band-tint{background:var(--moss)}
+.band-dark{background:var(--forest);color:#E8EFE9}
+.band-dark p{color:#C3D0C8}
+.lede{font-size:1.2rem;color:var(--muted);max-width:56ch}
+.band-dark .lede{color:#C3D0C8}
+:focus-visible{outline:3px solid #E9B520;outline-offset:3px;border-radius:4px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font:600 1rem var(--body);padding:15px 26px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;transition:background .15s}
+.btn-primary{background:var(--macaw);color:#fff}
+.btn-primary:hover{background:var(--macaw-dark)}
+.btn-ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.band .btn-ghost:hover{background:rgba(18,38,30,.07)}
+
+/* header */
+.top{position:absolute;inset:0 0 auto 0;z-index:5;color:#fff}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:22px;padding-bottom:22px}
+.mark{font-family:var(--display);font-size:1.6rem;text-decoration:none;letter-spacing:.01em}
+.mark span{font-family:var(--body);font-size:.85rem;font-weight:500;margin-left:.6em;opacity:.8}
+.top nav{display:flex;gap:26px;align-items:center;font-weight:500;font-size:.97rem}
+.top nav a{text-decoration:none}
+.top nav a:hover{text-decoration:underline}
+.top .btn{padding:10px 20px;font-size:.95rem}
+
+/* hero */
+.hero{position:relative;color:#fff;background:var(--forest);overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,26,20,.9) 0%,rgba(10,26,20,.72) 46%,rgba(10,26,20,.35) 100%)}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(340px,.85fr);gap:56px;align-items:center;padding-top:150px;padding-bottom:96px}
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.5rem)}
+.hero-sub{font-size:1.2rem;margin:26px 0 0;color:#DDE7E0;max-width:48ch}
+.hero-points{list-style:none;padding:0;margin:30px 0 34px;display:grid;gap:12px}
+.hero-points li{padding-left:30px;position:relative;color:#EEF3EF}
+.hero-points li::before{content:"";position:absolute;left:0;top:.5em;width:16px;height:9px;border-left:2.5px solid #E9B520;border-bottom:2.5px solid #E9B520;transform:rotate(-45deg)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+.hero-note{margin-top:22px;font-size:.93rem;color:#B9C8BF}
+
+/* form */
+.form-card{background:#fff;color:var(--ink);border-radius:18px;padding:30px 30px 26px;box-shadow:0 30px 70px rgba(4,14,10,.45)}
+.form-card h2{font-size:1.65rem;line-height:1.18;max-width:none}
+.form-card .small{font-size:.92rem;color:var(--muted);margin:8px 0 18px}
+.progress{height:6px;background:var(--moss);border-radius:99px;overflow:hidden;margin-bottom:8px}
+.progress i{display:block;height:100%;width:25%;background:var(--river);border-radius:99px;transition:width .3s}
+.step-label{font-size:.85rem;color:var(--muted);margin-bottom:18px}
+fieldset{border:0;padding:0;margin:0}
+legend{font-weight:600;font-size:1.08rem;padding:0;margin-bottom:14px}
+.step{display:none}
+.step.on{display:block}
+.choice{display:block;position:relative;margin-bottom:10px}
+.choice input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0}
+.choice span{display:block;padding:13px 16px;border:1.5px solid var(--line);border-radius:12px;font-weight:500;transition:border-color .12s,background .12s}
+.choice input:checked + span{border-color:var(--river);background:#EAF2EC}
+.choice input:focus-visible + span{outline:3px solid #E9B520;outline-offset:2px}
+.field{margin-bottom:14px}
+.field label{display:block;font-weight:600;font-size:.93rem;margin-bottom:6px}
+.field input{width:100%;font:inherit;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}
+.field input:focus{border-color:var(--river);outline:0;box-shadow:0 0 0 3px rgba(44,100,85,.2)}
+.form-nav{display:flex;gap:10px;margin-top:18px}
+.form-nav .btn{flex:1}
+.btn-back{background:var(--moss);color:var(--ink);flex:0 0 auto!important}
+.form-msg{font-size:.92rem;color:var(--macaw-dark);min-height:1.4em;margin:10px 0 0}
+.form-foot{font-size:.84rem;color:var(--muted);margin:14px 0 0}
+.done{text-align:left}
+.done h2{margin-bottom:10px}
+
+/* facts strip */
+.facts{background:var(--forest);color:#E8EFE9;border-top:1px solid rgba(255,255,255,.12)}
+.facts ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,1fr)}
+.facts li{padding:26px 18px;border-left:1px solid rgba(255,255,255,.12);font-size:.95rem;color:#C3D0C8}
+.facts li:first-child{border-left:0;padding-left:0}
+.facts b{display:block;font-family:var(--display);font-weight:400;font-size:1.5rem;color:#fff;line-height:1.15;margin-bottom:4px}
+
+/* split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.split img{border-radius:14px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.split h2{margin-bottom:22px}
+.listed{margin-top:28px;padding-top:22px;border-top:1px solid var(--line);font-size:.95rem;color:var(--muted)}
+.listed b{color:var(--ink);font-weight:600}
+
+/* guests */
+.guests{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
+.guest{display:grid;grid-template-columns:72px 1fr;gap:18px;align-items:start}
+.guest img{width:72px;height:72px;border-radius:50%;object-fit:cover}
+.guest h3{font-size:1.2rem;margin-bottom:6px}
+.guest p{font-size:1rem;color:var(--muted);margin:0}
+
+/* explain */
+.explain{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;margin:48px 0 40px}
+.explain h3{margin-bottom:12px}
+.explain p{color:var(--muted);font-size:1rem}
+
+/* place */
+.place-head{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:44px}
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.gallery figure{margin:0;position:relative;border-radius:12px;overflow:hidden;background:#1d3a2f}
+.gallery img{width:100%;height:100%;object-fit:cover}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 12px;font-size:.92rem;color:#fff;background:linear-gradient(transparent,rgba(8,20,15,.8))}
+.g1{grid-column:span 7;aspect-ratio:16/10}
+.g2{grid-column:span 5;aspect-ratio:auto}
+.g3,.g4,.g5{grid-column:span 4;aspect-ratio:4/3}
+
+/* retreat */
+.retreat{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:start;margin-top:44px}
+.incl{list-style:none;padding:0;margin:0;columns:2;column-gap:36px}
+.incl li{break-inside:avoid;padding:13px 0 13px 28px;border-bottom:1px solid var(--line);position:relative}
+.incl li::before{content:"";position:absolute;left:2px;top:1.35em;width:13px;height:7px;border-left:2px solid var(--river);border-bottom:2px solid var(--river);transform:rotate(-45deg)}
+.price-card{background:#fff;border-radius:16px;padding:30px;border:1px solid var(--line)}
+.price-card h3{margin-bottom:4px}
+.price-card .small{color:var(--muted);font-size:.93rem;margin-bottom:14px}
+.rooms{width:100%;border-collapse:collapse;margin-bottom:22px}
+.rooms td{padding:13px 0;border-bottom:1px solid var(--line)}
+.rooms td:last-child{text-align:right;font-family:var(--display);font-size:1.25rem;white-space:nowrap}
+.dates{list-style:none;padding:0;margin:0 0 24px;display:flex;flex-wrap:wrap;gap:8px}
+.dates li{padding:7px 13px;border-radius:99px;background:var(--moss);font-size:.9rem;font-weight:500}
+.price-card .btn{width:100%}
+
+/* team */
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:48px}
+.team img{aspect-ratio:4/5;width:100%;object-fit:cover;border-radius:12px;margin-bottom:18px;background:#1d3a2f}
+.team h3{color:#fff;margin-bottom:2px}
+.team .role{color:#E9B520;font-size:.95rem;font-weight:500;margin-bottom:10px}
+.team p{font-size:1rem}
+
+/* steps */
+.steps{list-style:none;counter-reset:s;padding:0;margin:48px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.steps li{counter-increment:s;padding:26px 28px 0 0;border-top:2px solid var(--river);margin-right:14px}
+.steps li::before{content:counter(s);font-family:var(--display);font-size:2.6rem;color:var(--river);display:block;line-height:1;margin-bottom:14px}
+.steps h3{font-size:1.25rem;margin-bottom:8px}
+.steps p{font-size:1rem;color:var(--muted)}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;padding:20px 40px 20px 0;font-weight:600;font-size:1.08rem;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:1.6rem;font-weight:400;color:var(--river)}
+details[open] summary::after{content:"\2212"}
+details p{color:var(--muted);padding-bottom:20px;margin:0}
+
+/* close */
+.close{text-align:left}
+.close .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:64px;align-items:center}
+.close h2{color:#fff;max-width:16ch;margin-bottom:18px}
+.close-actions{display:grid;gap:14px}
+.close-actions .btn{width:100%}
+
+footer{background:#0C1B15;color:#9FB0A7;font-size:.88rem;padding:40px 0 110px}
+footer p{max-width:86ch;margin-bottom:.8em}
+
+.sticky{display:none}
+
+@media (max-width:980px){
+  .band{padding:68px 0}
+  .hero .wrap{grid-template-columns:1fr;padding-top:110px;padding-bottom:60px;gap:40px}
+  .top nav a:not(.btn){display:none}
+  .facts ul{grid-template-columns:repeat(2,1fr)}
+  .facts li{padding:20px 14px;border-left:0;border-top:1px solid rgba(255,255,255,.12)}
+  .facts li:first-child{padding-left:14px}
+  .facts li:nth-child(-n+2){border-top:0}
+  .split,.place-head,.retreat,.faq-grid,.close .wrap{grid-template-columns:1fr;gap:36px}
+  .guests,.explain,.team{grid-template-columns:1fr;gap:28px}
+  .team{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr;row-gap:30px}
+  .g1,.g2{grid-column:span 12;aspect-ratio:16/10}
+  .g3,.g4,.g5{grid-column:span 12}
+  .sticky{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(18,38,30,.96);color:#fff}
+  .sticky .btn{flex:1;padding:13px 10px;font-size:.95rem}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .incl{columns:1}
+  .team,.steps{grid-template-columns:1fr}
+  .form-card{padding:24px 20px}
+  .mark span{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top">MahaDevi<span>Retreats, Colombia</span></a>
+    <nav aria-label="Page">
+      <a href="#retreat">The retreat</a>
+      <a href="#place">The place</a>
+      <a href="#team">Your guides</a>
+      <a href="#faq">Questions</a>
+      <a class="btn btn-primary" href="#apply">Check your fit</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <img class="hero-bg" src="https://mahadeviayahuasca.com/wp-content/uploads/Mahadevi-Ayahuasca-Retreat-Maloca-in-Colombia-Putumayo-header-Image-Medium.webp" alt="" fetchpriority="high">
+  <div class="wrap">
+    <div>
+      <h1>Eight days of traditional ceremony in the Colombian jungle</h1>
+      <p class="hero-sub">A small-group retreat in Putumayo, led by Taita Miguel Mavisoy, a Camsá healer whose lineage goes back twelve generations.</p>
+      <ul class="hero-points">
+        <li>Free, private call before you commit to anything</li>
+        <li>Medical and psychiatric screening for every guest</li>
+        <li>Groups of 7 to 12, with one staff member for every two guests</li>
+        <li>90 days of integration support after you go home</li>
+      </ul>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#apply">Check your fit</a>
+        <a class="btn btn-ghost" href="#retreat">See the 8-day retreat</a>
+      </div>
+      <p class="hero-note">Next retreat: December 6 to 13, 2026. Seven more dates in 2027.</p>
+    </div>
+
+    <div class="form-card" id="apply">
+      <form id="fit" novalidate>
+        <h2>Check if this retreat is right for you</h2>
+        <p class="small">Four short questions. No cost, no obligation, and your answers stay private.</p>
+        <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+        <div class="step-label" id="stepLabel" aria-live="polite">Step 1 of 4</div>
+
+        <fieldset class="step on" data-step="1">
+          <legend>What are you looking for?</legend>
+          <label class="choice"><input type="radio" name="looking_for" value="Clarity and direction" required><span>Clarity and direction</span></label>
+          <label class="choice"><input type="radio" name="looking_for" value="Rest and a reset"><span>Rest and a reset</span></label>
+          <label class="choice"><input type="radio" name="looking_for" value="Deeper connection"><span>Deeper connection</span></label>
+          <label class="choice"><input type="radio" name="looking_for" value="Not sure yet"><span>I'm not sure yet</span></label>
+        </fieldset>
+
+        <fieldset class="step" data-step="2">
+          <legend>Have you sat in a traditional ceremony before?</legend>
+          <label class="choice"><input type="radio" name="experience" value="First time" required><span>No, this would be my first</span></label>
+          <label class="choice"><input type="radio" name="experience" value="Once or twice"><span>Once or twice</span></label>
+          <label class="choice"><input type="radio" name="experience" value="Several times"><span>Several times</span></label>
+        </fieldset>
+
+        <fieldset class="step" data-step="3">
+          <legend>When would you like to come?</legend>
+          <label class="choice"><input type="radio" name="timing" value="December 2026" required><span>December 6 to 13, 2026</span></label>
+          <label class="choice"><input type="radio" name="timing" value="Feb to Mar 2027"><span>February or March 2027</span></label>
+          <label class="choice"><input type="radio" name="timing" value="Jun to Aug 2027"><span>June to August 2027</span></label>
+          <label class="choice"><input type="radio" name="timing" value="Later or flexible"><span>Later in 2027, or I'm flexible</span></label>
+        </fieldset>
+
+        <fieldset class="step" data-step="4">
+          <legend>Where can we reach you?</legend>
+          <div class="field"><label for="f-name">Full name</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="f-phone">Phone or WhatsApp</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+          <input type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+        </fieldset>
+
+        <p class="form-msg" id="msg" role="alert"></p>
+        <div class="form-nav">
+          <button type="button" class="btn btn-back" id="back" hidden>Back</button>
+          <button type="button" class="btn btn-primary" id="next">Continue</button>
+        </div>
+        <p class="form-foot">We reply within one business day to set up your call.</p>
+      </form>
+      <div class="done" id="done" hidden>
+        <h2>Request sent</h2>
+        <p>Thank you. We'll contact you within one business day to set up your free call. If you'd rather not wait, message us on WhatsApp.</p>
+        <a class="btn btn-primary" href="https://wa.me/573232081190">Message us on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="facts" aria-label="At a glance">
+  <div class="wrap">
+    <ul>
+      <li><b>7 nights</b>Eight days on the land</li>
+      <li><b>4 ceremonies</b>Three by night, one by day</li>
+      <li><b>7 to 12</b>Guests in each group</li>
+      <li><b>1 to 2</b>Staff to guest ratio</li>
+      <li><b>30 minutes</b>To the nearest hospital</li>
+      <li><b>90 days</b>Of integration care</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap split">
+    <img src="https://mahadeviayahuasca.com/wp-content/uploads/mahadevi-retreat-mocoa-river-meditation-grounding-putumayo-colombia.webp" alt="A guest sitting quietly beside the river at the retreat" loading="lazy">
+    <div>
+      <h2>A week away from everything that keeps you busy</h2>
+      <p class="lede">MahaDevi sits near the Putumayo river, in a cooler part of the jungle with few mosquitoes. You sleep in a cabin, eat meals prepared for you, and spend your days between the river, the waterfall and the ceremony house.</p>
+      <p>The ceremonies follow the Camsá tradition and are led by a healer who grew up in it. Around them, a team that has supported more than 400 ceremonies looks after your safety, your preparation, and what you do with the experience once you're home.</p>
+      <p class="listed"><b>Listed on</b> BookRetreats, Retreat Guru, Best Retreats and Tripaneer.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band band-tint">
+  <div class="wrap">
+    <h2>What past guests say about their week</h2>
+    <div class="guests">
+      <div class="guest">
+        <img src="https://mahadeviayahuasca.com/wp-content/uploads/brante-ayahuasca-retreat-review-family-connection.webp" alt="Brante" loading="lazy">
+        <div><h3>Brante</h3><p>Came for a first ceremony, calls the experience extraordinary, and says the founders felt like family.</p></div>
+      </div>
+      <div class="guest">
+        <img src="https://mahadeviayahuasca.com/wp-content/uploads/lester-ayahuasca-ceremony-experience-colombia.webp" alt="Lester" loading="lazy">
+        <div><h3>Lester</h3><p>Remembers a spectacular first night, with facilitators who stayed close and supported him throughout.</p></div>
+      </div>
+      <div class="guest">
+        <img src="https://mahadeviayahuasca.com/wp-content/uploads/chad-mahadevi-retreat-safety-integration-review.webp" alt="Chad" loading="lazy">
+        <div><h3>Chad</h3><p>Joined in July 2025 and describes safe, personal care, with integration support that continued after he left.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Understanding a ceremonial retreat</h2>
+    <div class="explain">
+      <div>
+        <h3>What it is</h3>
+        <p>A multi-day program built around traditional ceremony. It starts with screening and preparation weeks before you travel, and continues with integration support for three months afterwards.</p>
+      </div>
+      <div>
+        <h3>How this one differs</h3>
+        <p>The ceremonies are led by an Indigenous healer in his own region, not by a visiting facilitator. Groups stay small, and the team is large enough that someone is always near you.</p>
+      </div>
+      <div>
+        <h3>Who it's for</h3>
+        <p>Adults who want time to slow down and reflect, including first-timers. It is not a medical treatment, and not everyone is accepted. Screening decides whether it's a safe fit for you.</p>
+      </div>
+    </div>
+    <a class="btn btn-primary" href="#apply">Book a free call</a>
+  </div>
+</section>
+
+<section class="band band-tint" id="place">
+  <div class="wrap">
+    <div class="place-head">
+      <h2>Cabins, a pool, and a river you can sit in</h2>
+      <p class="lede">Between ceremonies there is nothing you have to do. Most guests rest, swim, and walk to the waterfall on the property.</p>
+    </div>
+    <div class="gallery">
+      <figure class="g1"><img src="https://mahadeviayahuasca.com/wp-content/uploads/ayahuasca-retreat-colombia-pool-putumayo.webp" alt="The pool at the retreat, surrounded by jungle" loading="lazy"><figcaption>The pool</figcaption></figure>
+      <figure class="g2"><img src="https://mahadeviayahuasca.com/wp-content/uploads/mahadevi-retreat-fin-del-mundo-waterfall-hike-putumayo-colombia.webp" alt="Fin del Mundo waterfall" loading="lazy"><figcaption>Fin del Mundo waterfall hike</figcaption></figure>
+      <figure class="g3"><img src="https://mahadeviayahuasca.com/wp-content/uploads/ayahuasca-retreat-colombia-rustic-cabin-interior.webp.webp" alt="Inside a private cabin" loading="lazy"><figcaption>Private jungle cabins</figcaption></figure>
+      <figure class="g4"><img src="https://mahadeviayahuasca.com/wp-content/uploads/ayahuasca-retreat-colombia-natural-jacuzzi.webp" alt="A natural stone jacuzzi" loading="lazy"><figcaption>Natural jacuzzi</figcaption></figure>
+      <figure class="g5"><img src="https://mahadeviayahuasca.com/wp-content/uploads/mahadevi-ayahuasca-retreat-putumayo-river-waterfall-copy.webp" alt="The Putumayo river running through the jungle" loading="lazy"><figcaption>River cold plunge</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="retreat">
+  <div class="wrap">
+    <h2>The 8-day retreat</h2>
+    <p class="lede" style="margin-top:18px">One price covers the whole week, from the airport pickup to the support you get after you're home.</p>
+    <div class="retreat">
+      <div>
+        <h3 style="margin-bottom:14px">What's included</h3>
+        <ul class="incl">
+          <li>Four traditional ceremonies with Taita Miguel, one held in daylight</li>
+          <li>Seven nights of lodging</li>
+          <li>All meals</li>
+          <li>Airport transfers both ways</li>
+          <li>Guided preparation before you travel</li>
+          <li>Fin del Mundo waterfall hike</li>
+          <li>Breathwork sessions</li>
+          <li>Cacao ceremony</li>
+          <li>Visit to a local market</li>
+          <li>90 days of integration care</li>
+        </ul>
+        <h3 style="margin:40px 0 12px">Medicine Maker dates</h3>
+        <p style="color:var(--muted)">On select dates you can spend time alongside Taita Miguel learning how the tradition's plant preparations are made by hand. Medicine Maker retreats start at $4,350. Ask about availability on your call.</p>
+      </div>
+      <div class="price-card">
+        <h3>Rooms and prices</h3>
+        <p class="small">Per person for 7 nights, in US dollars.</p>
+        <table class="rooms">
+          <tr><td>Shared room</td><td>from $3,550</td></tr>
+          <tr><td>Private cabin</td><td>$3,850</td></tr>
+          <tr><td>Jacuzzi room</td><td>$4,850</td></tr>
+        </table>
+        <h3 style="font-size:1.15rem;margin-bottom:12px">Open dates</h3>
+        <ul class="dates">
+          <li>Dec 6 to 13, 2026</li>
+          <li>Feb 6 to 13, 2027</li>
+          <li>Mar 6 to 13, 2027</li>
+          <li>Jun 12 to 19, 2027</li>
+          <li>Jul 24 to 31, 2027</li>
+          <li>Aug 21 to 28, 2027</li>
+          <li>Sep 25 to Oct 2, 2027</li>
+          <li>Dec 4 to 11, 2027</li>
+        </ul>
+        <a class="btn btn-primary" href="#apply">Check your fit</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band band-dark" id="team">
+  <div class="wrap">
+    <h2 style="color:#fff">The people who hold the week</h2>
+    <div class="team">
+      <div>
+        <img src="https://mahadeviayahuasca.com/wp-content/uploads/taita-miguel-camsa-tribe-healer-putumayo-colombia.webp" alt="Taita Miguel Mavisoy" loading="lazy">
+        <h3>Taita Miguel Mavisoy</h3>
+        <div class="role">Leads every ceremony</div>
+        <p>A Camsá healer from Putumayo, carrying a tradition handed down through twelve generations of his family.</p>
+      </div>
+      <div>
+        <img src="https://mahadeviayahuasca.com/wp-content/uploads/yasha-shah-founder-mahadevi-ayahuasca-retreat.webp" alt="Yasha Shah" loading="lazy">
+        <h3>Yasha Shah</h3>
+        <div class="role">Founder, safety and logistics</div>
+        <p>Runs screening, travel and on-site safety, so that the only thing you need to manage is getting to the airport.</p>
+      </div>
+      <div>
+        <img src="https://mahadeviayahuasca.com/wp-content/uploads/ania-halama-ayahuasca-integration-specialist.webp" alt="Ania Halama" loading="lazy">
+        <h3>Ania Halama</h3>
+        <div class="role">Lead facilitator, head of integration</div>
+        <p>Stays with the group through each ceremony and leads the integration work for the 90 days that follow.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>From first call to arrival</h2>
+    <ol class="steps">
+      <li><h3>Free call</h3><p>Answer four questions and we'll set up a private call to talk through what you're looking for.</p></li>
+      <li><h3>Screening</h3><p>You complete a medical and psychiatric screening. We only accept guests when it's a safe fit.</p></li>
+      <li><h3>Preparation</h3><p>In the weeks before you travel, we guide you through how to prepare, and what to bring.</p></li>
+      <li><h3>Arrival</h3><p>We meet you at the airport and drive you to the retreat. From there, everything is taken care of.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band band-tint" id="faq">
+  <div class="wrap faq-grid">
+    <div>
+      <h2>Questions people ask first</h2>
+      <p class="lede" style="margin-top:18px">Anything else, ask us on your call or on WhatsApp.</p>
+    </div>
+    <div>
+      <details open>
+        <summary>Is this suitable for a first-timer?</summary>
+        <p>Yes. Many guests have never sat in ceremony before. Small groups, screening before acceptance, a gentler daytime ceremony, and one staff member for every two guests are all there to support people who are new to this.</p>
+      </details>
+      <details>
+        <summary>How do you keep guests safe?</summary>
+        <p>Every guest is screened medically and psychiatrically before being accepted. Trained facilitators are present throughout each ceremony, and a hospital is about 30 minutes away.</p>
+      </details>
+      <details>
+        <summary>Is it legal?</summary>
+        <p>The retreat takes place in Putumayo, Colombia, where these Indigenous ceremonies are a long-standing tradition and MahaDevi operates within the local legal framework. We're glad to go through the details on your call.</p>
+      </details>
+      <details>
+        <summary>How much does it cost, and what does that cover?</summary>
+        <p>Retreats start at $3,550 per person in a shared room and $3,850 in a private cabin. The price covers lodging, meals, ceremonies, airport transfers, preparation and 90 days of integration care. Flights are not included.</p>
+      </details>
+      <details>
+        <summary>How long is the retreat?</summary>
+        <p>Seven nights and eight days, with four ceremonies during the week.</p>
+      </details>
+      <details>
+        <summary>What happens after I go home?</summary>
+        <p>You have 90 days of integration care with our team, to help you make sense of the week and carry it into daily life.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="band band-dark close">
+  <div class="wrap">
+    <div>
+      <h2>Start with a conversation</h2>
+      <p class="lede">The call is free and private. You'll talk with someone on our team about what you're looking for, and whether this retreat is a safe and sensible fit.</p>
+    </div>
+    <div class="close-actions">
+      <a class="btn btn-primary" href="#apply">Check your fit</a>
+      <a class="btn btn-ghost" href="https://wa.me/573232081190">Message us on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>MahaDevi Retreats, Putumayo, Colombia.</p>
+    <p>This retreat is not medical treatment and is not intended to diagnose, treat, cure or prevent any condition. Participation requires medical and psychiatric screening, and not all applicants are accepted. Talk to your doctor before making changes to any medication or care plan. If you are in crisis, contact your local emergency services.</p>
+    <p>&copy; <span id="yr">2026</span> MahaDevi Retreats</p>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a class="btn btn-primary" href="#apply">Check your fit</a>
+  <a class="btn btn-ghost" href="https://wa.me/573232081190">WhatsApp</a>
+</div>
+
+<script>
+// Where the form sends leads. Leave empty until a form handler is connected.
+var FORM_ENDPOINT = "";
+
+(function(){
+  var form = document.getElementById('fit'), steps = [].slice.call(form.querySelectorAll('.step'));
+  var bar = document.getElementById('bar'), label = document.getElementById('stepLabel');
+  var next = document.getElementById('next'), back = document.getElementById('back'), msg = document.getElementById('msg');
+  var i = 0;
+
+  function show(){
+    steps.forEach(function(s, n){ s.classList.toggle('on', n === i); });
+    bar.style.width = ((i + 1) / steps.length * 100) + '%';
+    label.textContent = 'Step ' + (i + 1) + ' of ' + steps.length;
+    back.hidden = i === 0;
+    next.textContent = i === steps.length - 1 ? 'Request my free call' : 'Continue';
+    msg.textContent = '';
+  }
+  function valid(){
+    var fields = [].slice.call(steps[i].querySelectorAll('input[required]'));
+    for (var n = 0; n < fields.length; n++){
+      if (!fields[n].checkValidity()){
+        msg.textContent = fields[n].type === 'radio' ? 'Choose one option to continue.'
+          : fields[n].type === 'email' ? 'Enter a valid email address.'
+          : 'Fill in ' + fields[n].labels[0].textContent.toLowerCase() + ' to continue.';
+        if (fields[n].type !== 'radio') fields[n].focus();
+        return false;
+      }
+    }
+    return true;
+  }
+  function finish(){
+    form.hidden = true;
+    document.getElementById('done').hidden = false;
+  }
+  function send(){
+    if (form.company.value) return finish(); // spam trap
+    if (!FORM_ENDPOINT){
+      msg.textContent = 'This form is not connected yet. Message us on WhatsApp instead.';
+      return;
+    }
+    next.disabled = true; next.textContent = 'Sending';
+    fetch(FORM_ENDPOINT, { method:'POST', body:new FormData(form), headers:{ 'Accept':'application/json' } })
+      .then(function(r){ if (!r.ok) throw new Error(); finish(); })
+      .catch(function(){
+        next.disabled = false; next.textContent = 'Request my free call';
+        msg.textContent = 'Your request was not sent. Try again, or message us on WhatsApp.';
+      });
+  }
+  next.addEventListener('click', function(){
+    if (!valid()) return;
+    if (i < steps.length - 1){ i++; show(); } else { send(); }
+  });
+  back.addEventListener('click', function(){ if (i > 0){ i--; show(); } });
+  form.addEventListener('change', function(e){
+    if (e.target.type === 'radio' && i < steps.length - 1){ setTimeout(function(){ i++; show(); }, 180); }
+  });
+  form.addEventListener('submit', function(e){ e.preventDefault(); next.click(); });
+  document.getElementById('yr').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
