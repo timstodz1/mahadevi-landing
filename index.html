@@ -540,8 +540,26 @@ footer p{max-width:86ch;margin-bottom:.8em}
 </div>
 
 <script>
-// Where the form sends leads. Leave empty until a form handler is connected.
-var FORM_ENDPOINT = "";
+// Where the form sends leads: the GHL inbound webhook.
+var FORM_ENDPOINT = "https://services.leadconnectorhq.com/hooks/BYInwkrjQ0eMhn9HpiHj/webhook-trigger/993ec18a-8b5c-4003-9300-da96360deb83";
+
+// Keep ad click IDs and UTM tags from the landing URL so they travel with the lead.
+var TRACK_KEYS = ["gclid","gbraid","wbraid","utm_source","utm_medium","utm_campaign","utm_term","utm_content"];
+(function(){
+  try {
+    var q = new URLSearchParams(location.search);
+    TRACK_KEYS.forEach(function(k){ if (q.get(k)) sessionStorage.setItem("md_" + k, q.get(k)); });
+  } catch (e) {}
+})();
+function trackingData(){
+  var out = {};
+  TRACK_KEYS.forEach(function(k){
+    var v = null;
+    try { v = sessionStorage.getItem("md_" + k); } catch (e) {}
+    if (v) out[k] = v;
+  });
+  return out;
+}
 
 (function(){
   var form = document.getElementById('fit'), steps = [].slice.call(form.querySelectorAll('.step'));
@@ -581,11 +599,33 @@ var FORM_ENDPOINT = "";
       return;
     }
     next.disabled = true; next.textContent = 'Sending';
-    fetch(FORM_ENDPOINT, { method:'POST', body:new FormData(form), headers:{ 'Accept':'application/json' } })
-      .then(function(r){ if (!r.ok) throw new Error(); finish(); })
-      .catch(function(){
-        next.disabled = false; next.textContent = 'Request my free call';
-        msg.textContent = 'Your request was not sent. Try again, or message us on WhatsApp.';
+    var full = form.name.value.trim(), sp = full.indexOf(' ');
+    var lead = {
+      first_name: sp > 0 ? full.slice(0, sp) : full,
+      last_name: sp > 0 ? full.slice(sp + 1) : '',
+      full_name: full,
+      email: form.email.value.trim(),
+      phone: form.phone.value.trim(),
+      looking_for: (form.querySelector('input[name=looking_for]:checked') || {}).value || '',
+      experience: (form.querySelector('input[name=experience]:checked') || {}).value || '',
+      timing: (form.querySelector('input[name=timing]:checked') || {}).value || '',
+      source: 'mahadeviretreats.com',
+      page_url: location.href.split('#')[0],
+      submitted_at: new Date().toISOString()
+    };
+    var t = trackingData(); for (var k in t) lead[k] = t[k];
+    var body = JSON.stringify(lead);
+    function failed(){
+      next.disabled = false; next.textContent = 'Request my free call';
+      msg.textContent = 'Your request was not sent. Try again, or message us on WhatsApp.';
+    }
+    fetch(FORM_ENDPOINT, { method:'POST', headers:{ 'Content-Type':'application/json' }, body: body })
+      .then(function(r){ if (!r.ok) throw new Error('status ' + r.status); finish(); })
+      .catch(function(err){
+        // A CORS block shows up as a TypeError: resend as a simple request the browser can't block.
+        if (!(err instanceof TypeError)) return failed();
+        fetch(FORM_ENDPOINT, { method:'POST', mode:'no-cors', headers:{ 'Content-Type':'text/plain' }, body: body })
+          .then(finish).catch(failed);
       });
   }
   next.addEventListener('click', function(){
