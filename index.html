@@ -608,12 +608,17 @@ function trackingData(){
     }
     return true;
   }
-  function finish(){
+  function showDone(){
     form.hidden = true;
     document.getElementById('done').hidden = false;
   }
+  function finish(){
+    // Real submissions go to the thank-you page, where the ad conversion is counted.
+    try { sessionStorage.setItem('md_first_name', form.name.value.trim().split(/\s+/)[0]); } catch (e) {}
+    location.href = '/thank-you.html';
+  }
   function send(){
-    if (form.company.value) return finish(); // spam trap
+    if (form.company.value) return showDone(); // spam trap: no redirect, no conversion
     if (!FORM_ENDPOINT){
       msg.textContent = 'This form is not connected yet. Message us on WhatsApp instead.';
       return;
