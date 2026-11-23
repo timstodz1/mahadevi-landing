@@ -1,0 +1,11 @@
+Campaign,Campaign Type,Campaign Status,EU political ads,Networks,Budget,Budget type,Bid Strategy Type,Languages,Ad Group,Max CPC,Keyword,Criterion Type,Match type,Negative keyword,Type
+Test,Search,Paused,No,Google search,1,Daily,Maximize clicks,en,,,,,,,
+Test,,,,,,,,,AG,1,,,,,
+Test,,,,,,,,,,,aaa free,Negative phrase match,,,
+Test,,,,,,,,,,,,,Phrase,bbb cheap,
+Test,,,,,,,,,,,ccc jobs,,Negative phrase,,
+Test,,,,,,,,,,,ddd job,Phrase,,,Negative
+Test,,,,,,,,,,,eee volunteer,Campaign negative phrase,,,
+Test,,,,,,,,,,,fff salary,Negative Broad,,,
+Test,,,,,,,,,AG,,ggg course,Negative Broad,,,
+Test,,,,,,,,,AG,,,,Phrase,hhh recipe,
